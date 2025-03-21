@@ -1,9 +1,9 @@
 output "repository_url" {
   description = "ECR Repository URL"
-  value       = aws_ecr_repository.app.repository_url
+  value       = data.aws_ecr_repository.existing.repository_url
 }
 
 output "repository_arn" {
   description = "ECR Repository ARN"
-  value       = aws_ecr_repository.app.arn
+  value       = data.aws_ecr_repository.existing.arn
 }
