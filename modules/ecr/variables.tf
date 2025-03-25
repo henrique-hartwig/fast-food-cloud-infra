@@ -7,8 +7,3 @@ variable "project_name" {
   description = "Project Name"
   type        = string
 }
-
-variable "environment" {
-  description = "Envs (dev, prod)"
-  type        = string
-}

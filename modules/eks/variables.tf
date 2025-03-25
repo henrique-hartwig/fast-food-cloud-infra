@@ -3,11 +3,6 @@ variable "project_name" {
   type        = string
 }
 
-variable "environment" {
-  description = "Envs (dev, prod)"
-  type        = string
-}
-
 variable "private_subnet_ids" {
   description = "IDs das subnets privadas"
   type        = list(string)
