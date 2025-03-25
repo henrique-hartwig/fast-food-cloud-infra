@@ -1,5 +1,5 @@
-## Como rodar o projeto
+## Run the project
 
-1. Clonar o repo
-2. Rodar o comando `terraform init`
-3. Rodar o comando `terraform apply`
+1. Clone the repo
+2. Run the command `terraform init`
+3. Run the command `terraform apply`
