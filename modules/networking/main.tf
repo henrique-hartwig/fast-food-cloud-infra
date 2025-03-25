@@ -45,3 +45,27 @@ data "aws_internet_gateway" "existing" {
     values = [data.aws_vpc.main.id]
   }
 }
+
+data "aws_nat_gateway" "existing" {
+  filter {
+    name   = "vpc-id"
+    values = [data.aws_vpc.main.id]
+  }
+  
+  filter {
+    name   = "tag:Name"
+    values = ["fastfood-nat*"]
+  }
+}
+
+data "aws_route_table" "private" {
+  filter {
+    name   = "vpc-id"
+    values = [data.aws_vpc.main.id]
+  }
+  
+  filter {
+    name   = "association.subnet-id"
+    values = [tolist(data.aws_subnets.private.ids)[0]]
+  }
+}
