@@ -5,6 +5,11 @@ terraform {
       version = "~> 5.0"
     }
   }
+    backend "s3" {
+    bucket = "fastfood-db-terraform-state"
+    key    = "infra/state.tfstate"
+    region = "us-east-1"
+  }
 }
 
 provider "aws" {
