@@ -9,12 +9,6 @@ variable "project_name" {
   default     = "fast-food"
 }
 
-variable "environment" {
-  description = "Envs (dev, prod)"
-  type        = string
-  default     = "dev"
-}
-
 variable "vpc_cidr" {
   description = "CIDR block VPC"
   type        = string
@@ -30,4 +24,12 @@ variable "ecr_repository_name" {
 variable "app_image_tag" {
   description = "Image tag"
   type        = string
+  default     = "latest"
 }
+
+variable "cluster_name" {
+  description = "EKS Cluster Name"
+  type        = string
+  default     = "fastfood-cluster"
+}
+
